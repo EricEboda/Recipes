@@ -11,18 +11,44 @@
     <h1>Make Your Own Recipes!</h1>
 
     <div class="recipeMaker">
-        <form onsubmit="return addIngredient(ingredient, quantity)"></form>
+
+        <form onsubmit="return addTitle(title)">
+            <label for="title">Recipe Title:</label>
+                <input id="title.value" name="title" type="text" placeholder="Enter your title here..."/>
+            <br><br>
+            <button type="submit">Assign Title</button>
+        </form>
+
+        <br><br>
+
+        <form onsubmit="return addIngredient(ingredient, quantity)">
             <label for="ingredient">Ingredient:</label>
-                <input id="ingredient.value" name="ingredient" type="text" placeholer="Enter your ingredient here..."/>
+                <input id="ingredient.value" name="ingredient" type="text"/>
             <label for="quantity">Quantity:</label>
                 <input id="quantity.value" name="quantity" type="number" min="0.01" step="0.01" />
             <br><br>
-            <button type="submit">Submit</button>
+            <button type="submit">Add Ingredient</button>
         </form>
 
-        <h2>Ingredients:</h2>
+        <br><br>
+
+        <form onsubmit="return addInstruction(instruction)">
+            <label for="ingredient">Instruction:</label>
+                <input id="instruction.value" name="instruction" type="text"/>
+            <br><br>
+            <button type="submit">Add Instruction</button>
+        </form>
+
+        <h1 id="titleBox"></h1>
+
+        <h2 id="ingredientBox"></h2>
         <ul id="ingredientList">
         </ul>
+
+        <h2 id="instructionBox"></h2>
+        <ol id="instructionList">
+        </ol>
+
     </div>
 
 </body>
