@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Make Your Recipes</title>
+  <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>Make Your Own Recipes!</h1>
+
+    <div class="recipeMaker">
+        <form onsubmit="return addIngredient(ingredient, quantity)"></form>
+            <label for="ingredient">Ingredient:</label>
+                <input id="ingredient.value" name="ingredient" type="text" placeholer="Enter your ingredient here..."/>
+            <label for="quantity">Quantity:</label>
+                <input id="quantity.value" name="quantity" type="number" min="0.01" step="0.01" />
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+
+        <h2>Ingredients:</h2>
+        <ul id="ingredientList">
+        </ul>
+    </div>
+
+</body>
+</html>
