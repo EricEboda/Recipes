@@ -23,13 +23,15 @@ function addIngredient(ingredient, quantity) {
 
 }
 
-function addInstruction(instruction) {
-  
+function addInstruction(instruction, time) {
+
   document.getElementById('instructionBox').textContent='Instructions:';
 
   let createOrderedList = document.createElement('li');
   document.getElementById('instructionList').appendChild(createOrderedList);
   
-  createOrderedList.innerHTML += instruction.value;
+  createOrderedList.innerHTML += instruction.value + "  " + time.value;
+
   return false;
+
 }

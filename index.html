@@ -32,9 +32,11 @@
 
         <br><br>
 
-        <form onsubmit="return addInstruction(instruction)">
-            <label for="ingredient">Instruction:</label>
+        <form onsubmit="return addInstruction(instruction, time)">
+            <label for="instruction">Instruction:</label>
                 <input id="instruction.value" name="instruction" type="text"/>
+            <label for="time">Instruction Time:</label>
+                <input id="time.value" name="time" type="text"/>   
             <br><br>
             <button type="submit">Add Instruction</button>
         </form>
