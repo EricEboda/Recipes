@@ -20,70 +20,84 @@
 <body>
     <h1>Make Your Own Recipes!</h1>
 
-    <div class="recipeMaker">
-
-        <form onsubmit="return addTitle(title)">
-            <label for="title">Recipe Title:</label>
-                <input id="title.value" name="title" type="text" placeholder="Enter your title here..."/>
-            <br><br>
-            <button type="submit">Assign Title</button>
-        </form>
-
-        <br><br>
-
-        <form onsubmit="return addIngredient(ingredient, quantity, measure)">
-            <label for="ingredient">Ingredient:</label>
-                <input id="ingredient.value" name="ingredient" type="text"/>
-
-            <label for="quantity">Quantity:</label>
-                <input id="quantity.value" name="quantity" type="number" min="0.01" step="0.01" />
-
-            <label for="measure">Measure:</label>
-                <input list="measures" id="measure.value" name="measure" />
-                    <datalist id="measures">
-                        <option value="ml">
-                        <option value="g">
-                        <option value="kg">
-                        <option value="mg">
-                        <option value="Teaspoon">
-                        <option value="Tablespoon">
-                        <option value="1/2 cup">
-                        <option value="Cup">
-                        <option value="Litre">
-                        <option value="Pound">
-                        <option value="Ounce">
-                        <option value="Gallon">
-                        <option value="Pint">
-                        <option value="Deciliter">
-                        <option value="Quart">
-                        <option value="Fluid ounce">
-                    </datalist>
-            <br><br>
-            <button type="submit">Add Ingredient</button>
-        </form>
-
-        <br><br>
-
-        <form onsubmit="return addInstruction(instruction, time)">
-            <label for="instruction">Instruction:</label>
-                <input id="instruction.value" name="instruction" type="text"/>
-            <label for="time">Instruction Time:</label>
-                <input id="time.value" name="time" type="time" step='1' min="00:00:00" max="20:00:00"/>
-            <br><br>
-            <button type="submit">Add Instruction</button>
-        </form>
-
-        <h1 id="titleBox"></h1>
-
-        <h2 id="ingredientBox"></h2>
-        <ul id="ingredientList">
-        </ul>
-
-        <h2 id="instructionBox"></h2>
-        <ol id="instructionList">
-        </ol>
-
+    <div class="row">
+        <div class="col">
+            <h2>My Recipes</h2>
+        </div>
+        <div class="col">
+            <h2>Create New Recipe</h2>  
+        </div>
     </div>
+
+    <div class="row recipeMaker">
+        <div class="col-md-2">
+            <form onsubmit="return addTitle(title)">
+                <label for="title">Recipe Title:</label>
+                    <input id="title.value" name="title" type="text" placeholder="Enter your title here..."/>
+                <br><br>
+                <button type="submit">Assign Title</button>
+            </form>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <form onsubmit="return addIngredient(ingredient, quantity, measure)">
+                <label for="ingredient">Ingredient:</label>
+                    <input id="ingredient.value" name="ingredient" type="text"/>
+
+                <label for="quantity">Quantity:</label>
+                    <input id="quantity.value" name="quantity" type="number" min="0.01" step="0.01" />
+
+                <label for="measure">Measure:</label>
+                    <input list="measures" id="measure.value" name="measure" />
+                        <datalist id="measures">
+                            <option value="ml">
+                            <option value="g">
+                            <option value="kg">
+                            <option value="mg">
+                            <option value="Teaspoon">
+                            <option value="Tablespoon">
+                            <option value="1/2 cup">
+                            <option value="Cup">
+                            <option value="Litre">
+                            <option value="Pound">
+                            <option value="Ounce">
+                            <option value="Gallon">
+                            <option value="Pint">
+                            <option value="Deciliter">
+                            <option value="Quart">
+                            <option value="Fluid ounce">
+                        </datalist>
+                <br><br>
+                <button type="submit">Add Ingredient</button>
+            </form>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <form onsubmit="return addInstruction(instruction, time)">
+                <label for="instruction">Instruction:</label>
+                    <input id="instruction.value" name="instruction" type="text"/>
+                <label for="time">Instruction Time:</label>
+                    <input id="time.value" name="time" type="time" step='1' min="00:00:00" max="20:00:00"/>
+                <br><br>
+                <button type="submit">Add Instruction</button>
+            </form>
+
+        </div>
+    </div>
+
+    <h1 id="titleBox"></h1>
+
+    <h2 id="ingredientBox"></h2>
+    <ul id="ingredientList">
+    </ul>
+
+    <h2 id="instructionBox"></h2>
+    <ol id="instructionList">
+    </ol>
 
 </body>
 </html>
