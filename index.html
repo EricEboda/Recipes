@@ -54,29 +54,26 @@
                 <label for="quantity">Quantity:</label>
                     <input id="quantity.value" name="quantity" type="number" min="0.01" step="0.01" />
 
-                <br>
+                <input type="text" name="measure" id="measure.value" list="measure.list" size="7"/>
+                <datalist id="measure.list">
+                    <option>g</option>
+                    <option>ml</option>
+                    <option>litre</option>
+                    <option>kg</option>
+                    <option>mg</option>
+                    <option>tsp</option>
+                    <option>tbsp</option>
+                    <option>cup</option>
+                    <option>lbs</option>
+                    <option>ounce</option>
+                    <option>gallon</option>
+                    <option>pint</option>
+                    <option>decilitre</option>
+                    <option>quart</option>
+                </datalist>
 
-                <label for="measure">Measure:</label>
-                    <input list="measures" id="measure.value" name="measure" size="1"/>
-                        <datalist id="measures">
-                            <option value="ml">
-                            <option value="g">
-                            <option value="kg">
-                            <option value="mg">
-                            <option value="Teaspoon">
-                            <option value="Tablespoon">
-                            <option value="1/2 cup">
-                            <option value="Cup">
-                            <option value="Litre">
-                            <option value="Pound">
-                            <option value="Ounce">
-                            <option value="Gallon">
-                            <option value="Pint">
-                            <option value="Deciliter">
-                            <option value="Quart">
-                            <option value="Fluid ounce">
-                        </datalist>
-                <br>
+                <br><br>
+
                 <button type="submit" class="btn btn-warning">Add Ingredient</button>
             </form>
 
@@ -96,7 +93,10 @@
         </div>
     </div>
 
-    <div class="container">
+    <br>
+
+    <div id="recipePage" class="container">
+
         <h1 id="titleBox" style="text-align: center;"></h1>
 
         <h2 id="ingredientBox"></h2>

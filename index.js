@@ -11,13 +11,13 @@ function addTitle(title) {
 }
 
 function addIngredient(ingredient, quantity, measure) {
-  
+
   document.getElementById('ingredientBox').textContent='Ingredients:';
 
   let createUnorderedList = document.createElement('li');
   document.getElementById('ingredientList').appendChild(createUnorderedList);
   
-  createUnorderedList.innerHTML += ingredient.value + ": " + quantity.value + measure.value;
+  createUnorderedList.innerHTML += ingredient.value + ": " + quantity.value + " " + measure.value;
 
   return false;
 
