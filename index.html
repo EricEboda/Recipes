@@ -36,12 +36,9 @@
 
     <div class="row recipeMaker">
         <div class="col-lg-4 text-center">
-            <form onsubmit="return addTitle(title)">
+
                 <label for="title">Recipe Title:</label>
-                    <input id="title.value" name="title" type="text" placeholder="Enter your title here..."/>
-                <br><br>
-                <button type="submit" class="btn btn-primary">Assign Title</button>
-            </form>
+                    <input onkeyup="getVal()" class="addTitle" id="title.value" name="title" type="text" placeholder="Enter your title here..."/>
 
         </div>
         
@@ -90,10 +87,10 @@
                 <button type="submit" class="btn btn-info">Add Instruction</button>
             </form>
 
+            <button class="saveButton btn btn-success" onclick="saveRecipe()">Save Recipe</button>
+
         </div>
     </div>
-
-    <br>
 
     <div id="recipePage" class="container">
 
@@ -108,7 +105,14 @@
         </ol>
 
     </div>
+
+    
+        <div class="recipeList">
+
+        </div>
+    
     
     <script src="index.js"></script>
+    <script src="recipes.js"></script>
 </body>
 </html>

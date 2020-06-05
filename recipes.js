@@ -1,15 +1,4 @@
-const recipes = [
-    {
-      title: "mac n cheese",
-      ingredients: ["cheese", "macaroni"],
-      instructions: ["cook", "heat-up"]
-    },
-    {
-        title: "Spaghetti",
-        ingredients: ["pasta", "water"],
-        instructions: ["cook", "boil"]
-    }
-  ]
+const recipes = [];
   
   recipes.forEach(function(recipe) {
     console.log(recipe);
