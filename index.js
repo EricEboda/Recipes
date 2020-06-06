@@ -1,12 +1,3 @@
-const recipes = [];
-
-window.onload = function() {
-  if (JSON.parse(localStorage.getItem("recipes")) != null)
-    recipes = JSON.parse(localStorage.getItem("recipes"));
-  console.log(recipes);
-  display();
-};
-
 function saveRecipe() {
   
   if (document.querySelector(".addTitle").value.trim() != "") {
