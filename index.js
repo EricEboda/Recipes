@@ -1,14 +1,19 @@
 function saveRecipe() {
   
-  if (document.querySelector(".addTitle").value.trim() != "") {
-    recipes.push(document.querySelector(".addTitle").value.trim());
-    if(localStorage.getItem("recipes") == null) {
+    if (document.querySelector(".addTitle").value.trim() != "") {
+      recipes.push(document.querySelector(".addTitle").value.trim());
       localStorage.setItem("recipes", JSON.stringify(recipes));
+
+      localStorage.setItem("fullRecipes", JSON.stringify(fullRecipes));
+
+      alert("Your recipe has been saved.");
+
+
+      display();
+
     } else {
-      localStorage.setItem("recipes", JSON.stringify(recipes));
+      alert("You must assign a title before saving the recipe.");
     }
-    display();
-  }
 }
 
 function display() {
@@ -19,11 +24,13 @@ function display() {
 
 function del(index){
   recipes.splice(index, 1);
-  if (localStorage.getItem("recipes") == null) {
-    localStorage.setItem("recipes", JSON.stringify(recipes));
-  } else {
-    localStorage.setItem("recipes", JSON.stringify(recipes));
-  }
+
+  fullRecipes.splice(index, 1);
+
+  localStorage.setItem("recipes", JSON.stringify(recipes));
+
+  localStorage.setItem("fullRecipes", JSON.stringify(fullRecipes));
+  
   display();
 }
 
@@ -40,6 +47,13 @@ function addIngredient(ingredient, quantity, measure) {
   document.getElementById('ingredientList').appendChild(createUnorderedList);
   
   createUnorderedList.innerHTML += ingredient.value + ": " + quantity.value + " " + measure.value;
+
+  //Saves ingredient as an array
+  if (ingredient.value + quantity.value + measure.value != "") {
+  fullRecipes.push(ingredient.value + ": " + quantity.value + " " + measure.value);
+  }
+
+  console.log(fullRecipes);
 
   return false;
 
