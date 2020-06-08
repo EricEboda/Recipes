@@ -1,14 +1,19 @@
-var recipes = [];
+var ingredientsArray = [];
 
-var fullRecipes = [];
+var instructionsArray = [];
+
+var arrayOfRecipes = [];
 
 window.onload = function() {
-  if (JSON.parse(localStorage.getItem("recipes")) != null)
-  recipes = JSON.parse(localStorage.getItem("recipes"));
-  console.log(recipes);
+  
+  if (JSON.parse(localStorage.getItem("ingredientsArray")) != null)
+  ingredientsArray = JSON.parse(localStorage.getItem("ingredientsArray"));
 
-  if (JSON.parse(localStorage.getItem("fullRecipes")) != null)
-  fullRecipes = JSON.parse(localStorage.getItem("fullRecipes"));
-  console.log(fullRecipes);
+  if (JSON.parse(localStorage.getItem("instructionsArray")) != null)
+  instructionsArray = JSON.parse(localStorage.getItem("instructionsArray"));
+
+  if (JSON.parse(localStorage.getItem("arrayOfRecipes")) != null)
+  arrayOfRecipes = JSON.parse(localStorage.getItem("arrayOfRecipes"));
+  console.log(arrayOfRecipes);
   display();
 };
