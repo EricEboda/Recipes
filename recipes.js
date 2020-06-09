@@ -15,5 +15,16 @@ window.onload = function() {
   if (JSON.parse(localStorage.getItem("arrayOfRecipes")) != null)
   arrayOfRecipes = JSON.parse(localStorage.getItem("arrayOfRecipes"));
   console.log(arrayOfRecipes);
+
+  //START OF LIST
+  
+  //END OF LIST
+
   display();
+
+  
+
+  
+
 };
+

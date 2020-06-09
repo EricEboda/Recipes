@@ -33,13 +33,18 @@ function saveRecipe(name, ingredients, instructions) {
 function display() {
   document.querySelector(".recipeList").innerHTML = "";
   for (var i = 0; i < arrayOfRecipes.length; i++)
-    document.querySelector(".recipeList").innerHTML += "<center><div class='element'>" + arrayOfRecipes[i].name + "<button class='cookButton btn btn-primary'>Start Cooking</button><img src='images/bin.png' class='dustbin' onclick='del(" + i + ")'></div></center>";
+    document.querySelector(".recipeList").innerHTML += "<center><div class='element'>" + arrayOfRecipes[i].name + "<button onclick='buttonDirect(" + i + ")' class='cookButton btn btn-primary'>Start Cooking</button><img src='images/bin.png' class='dustbin' onclick='del(" + i + ")'></div></center>";
+}
+
+function buttonDirect(indexNum) {
+  window.location.href = "/display.html";
+  localStorage.setItem("indexNumber", JSON.stringify(indexNum));
 }
 
 function del(index){
 
   arrayOfRecipes.splice(index, 1);
-  
+
   localStorage.setItem("arrayOfRecipes", JSON.stringify(arrayOfRecipes));
 
   display();
