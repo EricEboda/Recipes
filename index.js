@@ -37,7 +37,7 @@ function display() {
 }
 
 function buttonDirect(indexNum) {
-  window.location.href = "/display.html";
+  window.location.href = "display.html";
   localStorage.setItem("indexNumber", JSON.stringify(indexNum));
 }
 
